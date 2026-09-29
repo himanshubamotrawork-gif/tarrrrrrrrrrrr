@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Your Registration – $750 Target Gift Card</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f6f9;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 16px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .content {
+      padding: 40px 36px 32px;
+    }
+
+    .bullseye {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #CC0000;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 15px;
+      color: #6b7280;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .subtitle strong {
+      color: #111;
+      font-weight: 600;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      background: #CC0000;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-text {
+      font-size: 14.5px;
+      color: #4b5563;
+      line-height: 1.4;
+    }
+
+    .step-text strong {
+      color: #111;
+      font-weight: 600;
+    }
+
+    .claim-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 56px;
+      background: #CC0000;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: background 0.2s, transform 0.15s;
+      margin-bottom: 14px;
+    }
+
+    .claim-btn:hover {
+      background: #a80000;
+      transform: translateY(-1px);
+    }
+
+    .agree {
+      text-align: center;
+      font-size: 12.5px;
+      color: #6b7280;
+      line-height: 1.4;
+      margin: 12px 0 18px;
+    }
+
+    .live-box {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 32px;
+    }
+
+    .live-feed {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #b91c1c;
+      transition: opacity 0.4s;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: pulseDot 1.6s ease infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 0 0 28px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #CC0000;
+      margin-bottom: 18px;
+    }
+
+    .faq-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 16px 18px;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: #111;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .faq-question:hover {
+      background: #f9fafb;
+    }
+
+    .chevron {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      transition: transform 0.25s;
+      color: #9ca3af;
+    }
+
+    .faq-item.open .chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s, padding 0.3s;
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.55;
+      padding: 0 18px;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding: 0 18px 16px;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 12px;
+      color: #9ca3af;
+      padding: 20px 24px 28px;
+      border-top: 1px solid #f0f0f0;
+      background: #fafafa;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 480px) {
+      .content { padding: 32px 20px 24px; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="content">
+      <svg class="bullseye" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#CC0000"/>
+        <circle cx="50" cy="50" r="32" fill="#fff"/>
+        <circle cx="50" cy="50" r="16" fill="#CC0000"/>
+      </svg>
+
+      <h1>Complete Your Registration</h1>
+      <p class="subtitle">Follow these simple steps to claim your <strong>$750 Target gift card</strong></p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text">Click on <strong>"Claim Now"</strong></div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text">Enter your email and basic info</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text">Complete 3-5 sponsored deals</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text">Enjoy your <strong>$750 Target gift card!</strong></div>
+        </div>
+      </div>
+
+      <a href="https://giftclick.org/aff_c?offer_id=250&aff_id=203962" class="claim-btn">CLAIM NOW</a>
+
+      <p class="agree">By clicking "Claim Now", you agree to complete the required steps to receive your gift card.</p>
+
+      <div class="live-box">
+        <div class="live-feed" id="liveFeed">
+          <span class="live-dot"></span>
+          <span id="liveText">Jessica M. from Texas just claimed her $750 gift card • 2 min ago</span>
+        </div>
+      </div>
+
+      <hr>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How long do the deals take?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          Most deals take only a few minutes each. The entire process is typically finished in a short time, depending on the offers you select.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What are deals?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          Sponsored deals are simple offers from our partners (apps, trials, surveys, etc.). Completing them helps us cover the cost of your gift card.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How many deals do I have to do?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          Typically 3 to 5 sponsored deals must be completed and verified to qualify for the reward.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          When will I receive my reward?
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m6 9 6 6 6-6"></path>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          Rewards are issued after all required deals are verified, generally within a few business days of completion.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      This is a promotional offer. Reward fulfillment subject to deal completion and verification.
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    const liveMessages = [
+      "Jessica M. from Texas just claimed her $750 gift card • 2 min ago",
+      "Marcus T. from Illinois claimed a $750 gift card • 5 min ago",
+      "Sophia L. from Florida just unlocked her reward • 8 min ago",
+      "Derek K. from Colorado claimed $750 • 1 min ago",
+      "Aisha R. from New York just finished the steps • 4 min ago",
+      "Tyler J. from Arizona claimed his gift card • 11 min ago",
+      "Emily P. from Georgia just claimed $750 • 3 min ago"
+    ];
+
+    function updateLiveFeed() {
+      const feed = document.getElementById('liveFeed');
+      const text = document.getElementById('liveText');
+      if (!feed || !text) return;
+      feed.style.opacity = '0';
+      setTimeout(() => {
+        text.textContent = liveMessages[Math.floor(Math.random() * liveMessages.length)];
+        feed.style.opacity = '1';
+      }, 300);
+    }
+
+    setInterval(updateLiveFeed, 3000);
+  </script>
+</body>
+</html>
